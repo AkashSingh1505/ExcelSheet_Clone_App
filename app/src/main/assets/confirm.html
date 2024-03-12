@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <button onclick="showConfirmationBox()">Close</button>
+
+    <!-- Confirmation Box -->
+    <div id="confirmationBox" class="confirmation-box">
+        <h2>Confirmation</h2>
+        <p>Do you really want to close this?</p>
+        <div class="confirmation-buttons">
+            <button class="confirm-button" onclick="closePage()">Yes</button>
+            <button class="cancel-button" onclick="hideConfirmationBox()">No</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

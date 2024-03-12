@@ -1,0 +1,336 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+nav{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.optionbar{
+    background-color: #0A532B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+.optionbar h4{
+    font-weight: bolder;
+    color: white;
+}
+.saveButton{
+    margin: 8px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.saveButton p{
+    margin-left: 4px;
+    font-size: 0.85rem;
+    color: rgb(225, 218, 218);
+
+}
+.closeButton{
+    margin: 8px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.closeButton p{
+    margin-right: 4px;
+    font-size: 0.85rem;
+    color: rgb(225, 218, 218);
+
+}
+
+/* tool bar */
+
+.toolbar{
+    background-color: #f1f1f1;
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 8px;
+    padding-left:8px;
+
+}
+
+.subToolbar{
+    background-color: #f1f1f1;
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 8px;
+    padding-left:8px;
+    border-bottom: 1px solid lightgray;
+
+}
+
+.icon-paint{
+    margin: 8px;
+    padding: 8px;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-paint input{
+
+    height: 15px;
+    width: 30px;
+}
+
+.icon-textPaint{
+    font-weight: bolder;
+    font-size: 1.2em;
+    display: flex;
+    margin: 8px;
+    padding: 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-textPaint input{
+
+    height: 15px;
+    width: 30px;
+}
+
+.sizeContainer{
+    font-size: smaller;
+    border-radius: 10px;
+    padding: 4px;
+    border: 1.2px solid lightgray;
+    background-color: white;
+
+}
+
+.inputFieldtool{
+    margin-left: 8px;
+    height: 100%;
+    width: 66%;
+    display: flex;
+    align-items: center;
+}
+
+.inputFieldtool input{
+    height: 80%;
+    padding-left: 5px;
+    width: 66%;
+    border-radius: 10px;
+    border: 1.2px solid lightgray;
+    flex-grow: 1;
+}
+
+.icon-incFontSize,.icon-decFontSize{
+
+    margin: 8px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
+
+}
+.icon-incFontSize:active{
+    border-radius: 5px;
+    border: 1px solid gray;
+    background-color: #CED2CC;
+}
+
+.icon-decFontSize:active{
+    border-radius: 5px;
+    border: 1px solid gray;
+    background-color: #CED2CC;
+}
+
+.icon-cut:active {
+    border-radius: 5px;
+    border: 1px solid gray;
+    background-color: #CED2CC;
+}
+.icon-paste:active{
+    border-radius: 5px;
+    border: 1px solid gray;
+    background-color: #CED2CC;
+}
+.icon-copy:active{
+    border-radius: 5px;
+    border: 1px solid gray;
+    background-color: #CED2CC;
+}
+
+
+.tool{
+    margin: 8px;
+    padding: 8px;
+    font-size: 0.8rem;
+}
+
+.toggleTool{
+    margin: 8px;
+    padding: 8px;
+    font-size: 0.8rem;
+}
+
+
+.selected{
+    border-radius: 5px;
+    border: 1px solid gray;
+    background-color: #CED2CC;
+}
+
+
+
+
+/*** conatiner ***/
+
+/* data container with scroll */
+.dataContainer{
+    background-color: darkgray;
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+    top: 150px;
+   overflow: auto;
+    width: 100vw; /* Set a fixed width for the container */
+    height: 100vh; /* Set a fixed height for the container */
+}
+.select-all{
+    height: 28.900px;
+    width: 28.900px;
+    z-index: 50;
+    background-color: whitesmoke;
+    position: fixed;
+    display: inline;
+    border-right: 0.571px solid lightgray;;
+    border-bottom: 0.571px solid lightgray;
+
+}
+
+.column-header{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    background-color: whitesmoke;
+    top: 0;
+    flex-grow: 1;
+    height: 28.567px;
+    margin-left: 28.858px;
+    z-index: 0;
+    border-bottom: 0.571px solid lightgray;
+
+
+}
+
+.column-heading{
+    height: 100%;
+    font-size: 0.75rem;
+    width: 99.429px;
+    border-right: 0.571px solid lightgray;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* complete row include row header */
+
+.row-bar{
+    display: flex;
+  }
+
+.row-header{
+    height: 100%;
+    width: 28.900px;
+    position: sticky;
+    left: 0;
+    background-color: whitesmoke;
+    z-index: 0;
+    flex-shrink: 0;
+    border-right: 0.571px solid lightgray;
+}
+.row-heading{
+    height: 25px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    flex-shrink: 0;
+    border-bottom: 0.571px solid lightgray;
+}
+
+
+
+/* containte input row and cell */
+/* .input-container{
+    position:relative;
+} */
+
+ .input-row-conatiner{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    height: 25px;
+    border-bottom: 0.571px solid lightgray;
+
+}
+
+.input-cell{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    overflow: hidden;
+    width:99.429px ;
+    height: 100%;
+    flex-shrink: 0;
+    border-right: 0.571px solid lightgray;
+
+}
+
+
+
+/* Adjust the appearance of scrollbars if needed */
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: white;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: green;
+    border-radius: 10px;
+  }
+
+
+/*******Effect classes******/
+
+.btnEffect{
+   border-radius: 10px;
+    border: 1px solid transparent;
+}
+.btnEffect:active{
+    border-radius: 5px;
+    border: 1px solid rgb(39, 153, 39);
+    background-color: rgb(6, 45, 6);
+}
+

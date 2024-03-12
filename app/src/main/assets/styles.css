@@ -1,0 +1,70 @@
+/* CSS for the confirmation box */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.confirmation-box {
+    display: none;
+    background-color: #107c41;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: slideBounce 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.confirmation-box h2 {
+    margin: 0;
+}
+
+.confirmation-box p {
+    margin: 10px 0;
+}
+
+.confirmation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.confirm-button, .cancel-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.confirm-button {
+    background-color: #ffffff;
+    color: #107c41;
+;
+}
+
+.cancel-button {
+    background-color: #000;
+    color: #fff;
+}
+
+@keyframes slideBounce {
+    0% {
+        transform: translate(-50%, -100%);
+    }
+    60% {
+        transform: translate(-50%, -50%);
+    }
+    75% {
+        transform: translate(-50%, -55%);
+    }
+    90% {
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
